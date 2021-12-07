@@ -435,7 +435,7 @@ export const AdminAddStudentContent = () => {
                   <label className="col-sm-3 control-label">Select Campus</label>
                   <div className="col-sm-5">
                     <select id={'campus_id'} name={'campus_id'} onChange={changeCampus} className="form-control" >
-                      <option selected disabled={true} value={''}>Select Campus</option>
+                      <option selected disabled={true}>Select Campus</option>
                       {dataLoaded && campusData.map(data => (
                               <>
                                 {state.campus_id = data.id}
@@ -450,7 +450,7 @@ export const AdminAddStudentContent = () => {
                   <label className="col-sm-3 control-label">Select Department</label>
                   <div className="col-sm-5">
                     <select id={'department_id'} name={'department_id'} onChange={handleChange} className="form-control" >
-                      <option selected disabled={true} value={''}>Select Department</option>
+                      <option selected disabled={true}>Select Department</option>
                       {dataLoaded && departmentData && departmentData.map(data => (
                               <>
                                 <>{state.department_id = data.id}</>

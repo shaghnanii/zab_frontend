@@ -448,7 +448,7 @@ export const AdminAddSupervisorContent = () => {
                   <label className="col-sm-3 control-label">Select Department</label>
                   <div className="col-sm-5">
                     <select id={'department_id'} name={'department_id'} onChange={handleChange} className="form-control" >
-                      <option selected disabled={true} value={''}>Select Department</option>
+                      <option selected disabled={true}>Select Department</option>
                       {dataLoaded && departmentData && departmentData.map(data => (
                               <>
                                 <>{state.department_id = data.id}</>
