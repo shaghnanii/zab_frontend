@@ -123,18 +123,18 @@ export const AdminAddSupervisorContent = () => {
                 ? setGenderError('Gender is required must be at least 1 character !')
                 : setGenderError('');
         break;
-      case 'majors':
-        errors.majors =
-            value.length < 2
-                ? setMajorsError('Majors is required and must be at least 2 digit long !')
-                : setMajorsError('');
-        break;
-      case 'batch':
-        errors.batch =
-            value.value.length !== 4
-                ? setBatchError('Batch(Year) is required and must be 4 digit long !')
-                : setBatchError('');
-        break;
+      // case 'majors':
+      //   errors.majors =
+      //       value.length < 2
+      //           ? setMajorsError('Majors is required and must be at least 2 digit long !')
+      //           : setMajorsError('');
+      //   break;
+      // case 'batch':
+      //   errors.batch =
+      //       value.value.length !== 4
+      //           ? setBatchError('Batch(Year) is required and must be 4 digit long !')
+      //           : setBatchError('');
+      //   break;
       case 'dob':
         errors.dob =
             value.length < 1
