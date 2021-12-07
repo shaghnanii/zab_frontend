@@ -128,6 +128,27 @@ export const PMSidebar = () => {
               </li>
             </ul>
           </li>
+
+          <li className="has-sub">
+            <a href="javascript:void(0);">
+              <i className="fa fa-file-pdf-o"></i>
+              <span className="title">Dispatch Results</span>
+            </a>
+            <ul>
+              <li>
+                <a href="/pm/fyp-one">
+                  <i className="entypo-docs"></i>
+                  <span className="title">FYP 1</span>
+                </a>
+              </li>
+              <li>
+                <a href="/pm/fyp-two">
+                  <i className="entypo-docs"></i>
+                  <span className="title">FYP 2</span>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
