@@ -40,7 +40,7 @@ const responseErrorHandler = (error) => {
         toaster["info"](error.response.data.message, 'Not Found');
     }
     if (error && error.response && error.response.status > 404) {
-        toaster["error"](error.response.data.message, error);
+        toaster["error"](error.response.data.message);
     }
 
     return Promise.reject(error);
