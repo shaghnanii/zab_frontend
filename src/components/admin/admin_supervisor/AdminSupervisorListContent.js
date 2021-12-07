@@ -19,7 +19,7 @@ export const AdminSupervisorListContent = () => {
   })
   const [dataSet, setDataSet] = useState(false)
   useEffect(() => {
-    api.admin_student_index()
+    api.admin_supervisor_index()
         .then(response => {
           setSupervisorData(response.data.data);
           setDataSet(true)
