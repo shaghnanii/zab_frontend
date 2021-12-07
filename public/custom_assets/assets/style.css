@@ -1,0 +1,27 @@
+.custom_colored_text_bold {
+    color: #ec5956;
+    font-weight: bold;
+    cursor: pointer;
+    -moz-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.custom_colored_text_normal {
+    color: #ec5956;
+    font-weight: normal;
+    cursor: pointer;
+    -moz-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.custom_display_dots {
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

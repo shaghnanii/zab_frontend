@@ -1,0 +1,67 @@
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    /*width: 120px;*/
+    /*height: 120px;*/
+    -webkit-animation: spin 2s cubic-bezier(1, 1.28, 0, 1.13) infinite; /* Safari */
+    animation: spin 2s cubic-bezier(1, 1.28, 0, 1.13) infinite;
+    background-color: #52521c;
+    width: 100px;
+    height: 100px;
+}
+.loaderparent {
+    height: 100vh;
+    background: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/*to roate icon spin and spind */
+.spin {
+    -webkit-animation: spin .9s infinite linear;
+    -moz-animation: spin .9s infinite linear;
+    -o-animation: spin .9s infinite linear;
+    animation: spin .9s infinite linear;
+    -webkit-transform-origin: 50% 58%;
+    transform-origin:50% 58%;
+    -ms-transform-origin:50% 58%; /* IE 9 */
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

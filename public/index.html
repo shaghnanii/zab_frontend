@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<!--    <link-->
+<!--      rel="stylesheet"-->
+<!--      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"-->
+<!--      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"-->
+<!--      crossorigin="anonymous"-->
+<!--    />-->
+    <link rel="icon" href="/custom_assets/main_assets/portal_favicon.png" />
+
+    <link rel="stylesheet" href="/custom_assets/assets/css/bootstrap.css" />
+
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/css/font-icons/entypo/css/entypo.css"
+    />
+
+    <link rel="stylesheet" href="/custom_assets/assets/css/neon-core.css" />
+    <link rel="stylesheet" href="/custom_assets/assets/css/neon-theme.css" />
+    <link rel="stylesheet" href="/custom_assets/assets/css/neon-forms.css" />
+    <link rel="stylesheet" href="/custom_assets/assets/css/custom.css" />
+    <link rel="stylesheet" href="/custom_assets/assets/style.css" />
+
+    <script src="/custom_assets/assets/js/jquery-1.11.3.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>-->
+
+    <!-- font awesome link  -->
+    <!-- <script
+      src="https://kit.fontawesome.com/066e1a3a36.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- import needed in student role  -->
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/js/jvectormap/jquery-jvectormap-1.2.2.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/js/rickshaw/rickshaw.min.css"
+    />
+
+    <title>React ZAB</title>
+
+    <style>
+      .sidebar-menu {
+        height: 100vh !important;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/js/jvectormap/jquery-jvectormap-1.2.2.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/custom_assets/assets/js/rickshaw/rickshaw.min.css"
+    />
+
+    <script>
+      function logout_confirmation() {
+        jQuery("#logout_modal").modal("show");
+      }
+      function show_logout_success_notification() {
+        var opts = {
+          closeButton: true,
+          debug: false,
+          positionClass: "toast-bottom-left",
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "5000",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr.success(
+          "You have successfully logged out of the application",
+          "Success",
+          opts
+        );
+
+        show_loading_bar({
+          pct: 100,
+          finish: function (pct) {
+            window.location.href = "/auth/logout";
+            hide_loading_bar();
+          },
+        });
+      }
+    </script>
+    <!-- Bottom scripts (common) -->
+    <script src="/custom_assets/assets/js/gsap/TweenMax.min.js"></script>
+    <script src="/custom_assets/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+    <script src="/custom_assets/assets/js/bootstrap.js"></script>
+    <script src="/custom_assets/assets/js/joinable.js"></script>
+    <script src="/custom_assets/assets/js/resizeable.js"></script>
+    <script src="/custom_assets/assets/js/neon-api.js"></script>
+    <script src="/custom_assets/assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+
+    <!-- Imported scripts on this page -->
+    <script src="/custom_assets/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
+    <script src="/custom_assets/assets/js/jquery.sparkline.min.js"></script>
+    <script src="/custom_assets/assets/js/rickshaw/vendor/d3.v3.js"></script>
+    <script src="/custom_assets/assets/js/rickshaw/rickshaw.min.js"></script>
+    <script src="/custom_assets/assets/js/raphael-min.js"></script>
+    <script src="/custom_assets/assets/js/morris.min.js"></script>
+    <script src="/custom_assets/assets/js/toastr.js"></script>
+    <script src="/custom_assets/assets/js/neon-chat.js"></script>
+
+    <script
+      src="/custom_assets/assets/js/bootstrap-datepicker.js"
+      id="script-resource-12"
+    ></script>
+
+    <script src="/custom_assets/assets/js/fileinput.js"></script>
+
+    <!-- JavaScripts initializations and stuff -->
+    <script src="/custom_assets/assets/js/neon-custom.js"></script>
+
+    <!-- Demo Settings -->
+    <script src="/custom_assets/assets/js/neon-demo.js"></script>
+  </body>
+</html>
