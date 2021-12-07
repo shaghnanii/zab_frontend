@@ -340,8 +340,7 @@ export const AdminAddStudentContent = () => {
                   <div className="col-sm-5">
                     <input
                       className="form-control"
-                      type="text"
-                      value={'abc123'}
+                      type="password"
                       placeholder="Password"
                       name="password"
                       id={'password'}
