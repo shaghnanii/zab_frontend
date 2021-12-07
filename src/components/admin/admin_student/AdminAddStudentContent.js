@@ -13,10 +13,10 @@ export const AdminAddStudentContent = () => {
     department_id: '',
     phone_number: '',
     address: '',
-    dob: '',
-    majors: '',
+    dob: '2021-03-03',
+    majors: 'bscs',
     gender: 'male',
-    batch: '',
+    batch: '2021',
     errors: {
       email: '',
       password: '',
