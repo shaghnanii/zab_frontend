@@ -97,7 +97,7 @@ export const StudentHomeContent = (props) => {
                   </h3>
                   <center>
                     <span>
-                      <a href="javascript:void(0);"Z>Batch</a>
+                      <a href="javascript:void(0);">Batch</a>
                     </span>
                   </center>
                 </div>
