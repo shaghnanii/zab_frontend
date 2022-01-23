@@ -1,6 +1,23 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import check_auth from "../../protected_routes/auth";
+import api from "../../../routes/api";
 
 export const StudentSidebar = () => {
+  const [checkGroupLoading, setCheckGroupLoading] = useState(false);
+  const [checkGroup, setCheckGroup] = useState(false);
+
+  useEffect(() => {
+    api.index('/student-fyp')
+        .then(response => {
+          setCheckGroup(response.data.data)
+          setCheckGroupLoading(true)
+        })
+        .catch((err) => {
+          console.log("Error ", err)
+          setCheckGroupLoading(false)
+        })
+  }, []);
+
   return (
       <div class="sidebar-menu" style={{ height: "100vh" }}>
         <div class="sidebar-menu-inner">
@@ -45,9 +62,24 @@ export const StudentSidebar = () => {
                 <li>
                   <a href="/student/project">
                     <i class="entypo-doc-text"></i>
-                    <span class="title">My Project</span>
+                    <span class="title">Projects</span>
                   </a>
                 </li>
+                {/*{checkGroupLoading && checkGroup ?*/}
+                {/*    <li>*/}
+                {/*      <a href="/student/group">*/}
+                {/*        <i className="entypo-doc-text"></i>*/}
+                {/*        <span className="title">Create Group</span>*/}
+                {/*      </a>*/}
+                {/*    </li> :  ''}*/}
+
+                <li>
+                  <a href="/student/group">
+                    <i className="entypo-doc-text"></i>
+                    <span className="title">Group</span>
+                  </a>
+                </li>
+
                 <li>
                   <a href="/student/proposal">
                     <i class="entypo-docs"></i>

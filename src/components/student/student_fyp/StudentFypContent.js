@@ -15,6 +15,7 @@ import {
     AvCheckbox
 } from 'availity-reactstrap-validation';
 import {Button, Label, FormGroup} from 'reactstrap';
+import {Link} from "react-router-dom";
 
 export const StudentFypContent = () => {
     const [state, setState] = useState({
@@ -194,11 +195,11 @@ export const StudentFypContent = () => {
                 <li className="active"><strong>Projects</strong></li>
             </ol>
 
+
             <h2>List of all projects </h2>
 
+            <Link to={'proposal'}><button className={'pull-right btn btn-success'}>Add/Upload Proposal</button></Link>
             <br/>
-
-            { console.log('projects::: ', projects)}
 
             {projectLoader && projects && projects.map(item =>
                 <div className="member-entry">
@@ -209,7 +210,7 @@ export const StudentFypContent = () => {
                     <div className="member-details"><h4>
                         <a href="#">{ item.name }</a></h4>
                         <div className="row info-list">
-                            <div className="col-sm-4"><i className="entypo-briefcase"></i>
+                            <div className="col-sm-4"><i className="entypo-list"></i>
                                 Fyp Type:  <a href="#">{ item.type }</a></div>
                             <div className="col-sm-4">
                                 <i className={item.status == true ? 'entypo-check' : 'entypo-block' }></i>

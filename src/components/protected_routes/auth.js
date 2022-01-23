@@ -1,3 +1,4 @@
+import api from "../../routes/api";
 class Auth {
   constructor() {
     // this.authenticated = false;

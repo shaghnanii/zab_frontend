@@ -34,7 +34,9 @@ const profile = async (headers = {}) => {
 };
 const dropdown_data = async (headers = {}) => {
     try {
-        return axios.get("/dropdown-data");
+        return axios.get("/dropdown-data", {
+            headers: getHeaders(headers)
+        });
     } catch (err) {
         throw err.response;
     }
@@ -360,6 +362,51 @@ const index = async (route, headers = {}) => {
     }
 }
 
+const show = async (route, id, headers = {}) => {
+    try {
+        return axios.get(route + `/${id}`, {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
+const store = async (route, payload, headers = {}) => {
+    try {
+        return axios.post(route, payload, {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
+const update = async (route, payload, id, headers = {}) => {
+    try {
+        return axios.put(route + `/${id}`, payload, {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
+const destroy = async (route, id, headers = {}) => {
+    try {
+        return axios.delete(route + `/${id}`, {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
+
 export default {
     login,
     dropdown_data,
@@ -405,4 +452,8 @@ export default {
     admin_pm_destroy,
 
     index,
+    show,
+    store,
+    update,
+    destroy,
 }

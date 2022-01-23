@@ -6,11 +6,13 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import check_auth from '../src/components/protected_routes/auth'
 import "toastr/build/toastr.min.css";
 import { Login } from "./components/auth/Login";
 import { WelcomePage } from "./components/Welcome/WelcomePage";
 import { AdminProtectedRoute } from "./components/protected_routes/AdminProtectedRoute";
 import { StudentProtectedRoute } from "./components/protected_routes/StudentProtectedRoute";
+
 import { PMProtectedRoute } from "./components/protected_routes/PMProtectedRoute";
 import { SupervisorProtectedRoute } from "./components/protected_routes/SupervisorProtectedRoute";
 
@@ -29,6 +31,7 @@ import { AdminAddPM } from "./components/admin/admin_pm/AdminAddPM";
 import { AdminPMList } from "./components/admin/admin_pm/AdminPMList";
 import { StudentHome } from "./components/student/StudentHome";
 import { StudentFyp } from "./components/student/student_fyp/StudentFyp";
+import { StudentCreateGroup } from "./components/student/create_group/StudentCreateGroup";
 import { StudentMeeting } from "./components/student/student_meetings/StudentMeeting";
 import { StudentResult } from "./components/student/student_results/StudentResult";
 import { StudentSupervisor } from "./components/student/student_supervisor/StudentSupervisor";
@@ -123,6 +126,12 @@ function App() {
                 path="/student/project"
                 component={StudentFyp}
               />
+
+              <StudentProtectedRoute
+                  path="/student/group"
+                  component={StudentCreateGroup}
+              />
+
 
               <StudentProtectedRoute
                 path="/student/supervisor-comments"
