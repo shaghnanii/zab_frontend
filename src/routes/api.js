@@ -348,6 +348,18 @@ const admin_pm_destroy = async (id, headers = {}) => {
 }
 // admin routes end here
 
+
+const index = async (route, headers = {}) => {
+    try {
+        return axios.get(route, {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
 export default {
     login,
     dropdown_data,
@@ -391,4 +403,6 @@ export default {
     admin_pm_store,
     admin_pm_update,
     admin_pm_destroy,
+
+    index,
 }
