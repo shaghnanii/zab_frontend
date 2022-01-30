@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import api from "../../../routes/api";
 import toastr from "toastr";
+import axios from "axios";
+import {ACCESS_TOKEN_NAME} from "../../_general_components/_api/apiconstants";
 
 export const StudentCreateGroupContent = () => {
 
@@ -14,11 +16,12 @@ export const StudentCreateGroupContent = () => {
     const [partnerData, setPartnerData] = useState({})
 
     const [dataLoaded, setDataLoaded] = useState(false)
+    const [test, setTest] = useState(false)
 
 
     const [checkGroupLoading, setCheckGroupLoading] = useState(false);
     const [checkGroup, setCheckGroup] = useState(false);
-
+    const [checkGroupData, setCheckGroupData] = useState(false);
 
     useEffect(() => {
         api.dropdown_data()
@@ -33,27 +36,59 @@ export const StudentCreateGroupContent = () => {
                 console.log("Error in student complete profile controller: ", err)
             })
 
-
         api.index('/student-fyp')
             .then(response => {
-                setCheckGroup(response.data.data)
+                console.log('resp:M ', response)
+                setCheckGroup(response.data.check)
+                setCheckGroupData(response.data.group)
                 setCheckGroupLoading(true)
+
+                console.log("dataaaaaaaaaaaa: ", response.data.group)
+                getGroups(response.data.group)
+
             })
             .catch((err) => {
                 console.log("Error ", err)
                 setCheckGroupLoading(false)
             })
-
-        const setGdata = (e) => {
-            api.index('/groups')
+        const getGroups = async (id) => {
+            api.index('/groups/' + id)
                 .then(response => {
+                    console.log("apiiiiiiiiiiiiiiiiiii", response)
                     setGroupData(response.data.data)
+                    setTest(true)
                 })
                 .catch(err => {
                     failure_message()
                 })
         }
-        setGdata()
+
+
+        // const fetchData = async () => {
+        //     const token = localStorage.getItem(ACCESS_TOKEN_NAME);
+        //     const headers = {
+        //         Authorization: "Bearer " + token,
+        //     };
+        //     const response = await axios.get(process.env.REACT_APP_BACKEND_API_URL + '/api/student-fyp', {headers});
+        //     console.log('response: ', response)
+        //     setCheckGroup(response.data.check)
+        //     setCheckGroupData(response.data.group)
+        //     setCheckGroupLoading(true)
+        //     if (response.status === 200){
+        //         getSudentGroupData(response.data.group);
+        //     }
+        // };
+        //
+        // const getSudentGroupData = async (id) => {
+        //     const token = localStorage.getItem(ACCESS_TOKEN_NAME);
+        //     const headers = {
+        //         Authorization: "Bearer " + token,
+        //     };
+        //     const response = await axios.get(process.env.REACT_APP_BACKEND_API_URL + '/api/groups/' + id, {headers});
+        //     setGroupData(response.data.data)
+        // }
+        //
+        // fetchData();
 
     }, []);
 
@@ -123,12 +158,28 @@ export const StudentCreateGroupContent = () => {
             })
     }
 
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
+
     return (
         <>
-            {checkGroupLoading && checkGroup ?
+            {!checkGroupLoading && !groupData ?
                 <span>
                     <h2>Create Group</h2>
                     <br/>
+
+                    <p>{console.log(groupData)}</p>
 
                     <div className="row">
                     <div className="col-md-12">
@@ -275,21 +326,34 @@ export const StudentCreateGroupContent = () => {
 
             <div className="member-entry">
                 <a href="#" className="member-img">
-                    <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+                    <img src="/images/task.jpg"
                          className="img-rounded"/>
                     <i className="entypo-forward"></i>
-            </a>
-            <div className="member-details"><h4>
-                <a href="#"></a></h4>
-                <div className="row info-list">
-                    <div className="col-sm-4"><i className="entypo-briefcase"></i>
-                        Teacher <a href="#">SZABIST Islamabad</a></div>
-                    <div className="col-sm-4"><i className="entypo-twitter"></i> <a href="#">@example</a></div>
-                    <div className="col-sm-4"><i className="entypo-facebook"></i> <a href="#">fb.me/example</a></div>
-                    <div className="clear"></div>
-                    <div className="col-sm-4"><i className="entypo-location"></i> <a href="#">Islamabad</a></div>
-                    <div className="col-sm-4"><i className="entypo-mail"></i> <a href="#">example@gmail.com</a></div>
-                    <div className="col-sm-4"><i className="entypo-linkedin"></i> <a href="#">example</a></div>
+                </a>
+            <div className="member-details">
+                <div className="row" style={{marginLeft: '25px'} }>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <p href="#"><span>Group Name: </span>{groupData && groupData.name}</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <a href="#">Status: {groupData && groupData.status == true ? 'Active' : 'Not Active'}</a>
+                        </div>
+                    </div>
+
+                   <div className="row">
+                       <div className="col-sm-6">
+                           <a href="#">Group Members:</a>
+                           <p>{groupData && groupData.Students && groupData.Students.map(item =>
+                               <span style={{'margin-right': '5px'}}>[{item.name}]</span>
+                           )
+                           }</p>
+                       </div>
+                       <div className="col-sm-6">
+                           <p>Fyp Name: {groupData && groupData.Fyp && groupData.Fyp.name}</p>
+                           <a href="#" style={{'margin-top': '5px'}}>Group Created At: {groupData && groupData.createdAt && formatDate(groupData.createdAt)}</a>
+                       </div>
+                   </div>
                 </div>
             </div>
         </div>

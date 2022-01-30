@@ -204,14 +204,14 @@ export const StudentFypContent = () => {
             {projectLoader && projects && projects.map(item =>
                 <div className="member-entry">
                     <a href="#" className="member-img">
-                        <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg" className="img-rounded" />
+                        <img src="/images/project2.jpg" className="img-rounded" />
                         <i className="entypo-forward"></i>
                     </a>
                     <div className="member-details"><h4>
                         <a href="#">{ item.name }</a></h4>
                         <div className="row info-list">
-                            <div className="col-sm-4"><i className="entypo-list"></i>
-                                Fyp Type:  <a href="#">{ item.type }</a></div>
+                            <div className="col-sm-4">
+                                Fyp Type:  <a href="#">{ item.type.toUpperCase() }</a></div>
                             <div className="col-sm-4">
                                 <i className={item.status == true ? 'entypo-check' : 'entypo-block' }></i>
                                 <a href="#">{ item.status == true ? 'Active' : 'Not Active'}</a>
