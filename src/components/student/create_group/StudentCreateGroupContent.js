@@ -42,8 +42,7 @@ export const StudentCreateGroupContent = () => {
                 setCheckGroup(response.data.check)
                 setCheckGroupData(response.data.group)
                 setCheckGroupLoading(true)
-
-                console.log("dataaaaaaaaaaaa: ", response.data.group)
+                console.log("group ID: ", response.data.group)
                 getGroups(response.data.group)
 
             })
@@ -52,15 +51,22 @@ export const StudentCreateGroupContent = () => {
                 setCheckGroupLoading(false)
             })
         const getGroups = async (id) => {
-            api.index('/groups/' + id)
-                .then(response => {
-                    console.log("apiiiiiiiiiiiiiiiiiii", response)
-                    setGroupData(response.data.data)
-                    setTest(true)
-                })
-                .catch(err => {
-                    failure_message()
-                })
+            if (id){
+                api.index('/groups/' + id)
+                    .then(response => {
+                        console.log("apiiiiiiiiiiiiiiiiiii", response)
+                        setGroupData(response.data.data)
+                        setTest(true)
+                    })
+                    .catch(err => {
+                        failure_message()
+                    })
+            }
+            else {
+                setCheckGroupLoading(false)
+                setTest(false)
+                setGroupData(false)
+            }
         }
 
 
@@ -116,7 +122,7 @@ export const StudentCreateGroupContent = () => {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut",
             "onHidden": function () {
-                window.location = "/admin/fyp-list";
+                window.location = "/student/group";
             }
         }
         toastr.success('Successfully added new fyp', 'Success Message', opts);
@@ -235,7 +241,7 @@ export const StudentCreateGroupContent = () => {
                                                 </div>
 
                                                 <div className="form-group col-lg-5 col-md-5 col-sm-12">
-                                                    <label className="control-label">Select Campus</label>
+                                                    <label className="control-label">Select Supervisor</label>
                                                     <select onClick={handleChange} className="form-control"
                                                             name="supervisor_id" id={'supervisor_id'}>
                                                         <option value="" selected={true} disabled={true}>Select Supervisor</option>

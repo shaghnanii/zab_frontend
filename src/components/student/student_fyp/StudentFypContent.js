@@ -70,7 +70,7 @@ export const StudentFypContent = () => {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut",
             "onHidden": function () {
-                window.location = "/admin/fyp-list";
+                window.location = "/student/";
             }
         }
         toastr.success('Successfully added new fyp', 'Success Message', opts);
@@ -216,7 +216,8 @@ export const StudentFypContent = () => {
                                 <i className={item.status == true ? 'entypo-check' : 'entypo-block' }></i>
                                 <a href="#">{ item.status == true ? 'Active' : 'Not Active'}</a>
                             </div>
-                            <button className={item.status == false ? 'btn btn-primary' : 'btn btn-success' }  disabled={item.status == false ? true : false }>Select This Project</button>
+                            {/*<button className={item.status == true && item.Group ? 'btn btn-primary' : 'btn btn-success' }*/}
+                            {/*        disabled={item.status == true && item.Group ? true : false }>Select This Project</button>*/}
                         </div>
                         <div className="row info-list">
                             <div className="col-sm-12">

@@ -83,7 +83,7 @@ export const StudentSidebar = () => {
                 <li>
                   <a href="/student/proposal">
                     <i class="entypo-docs"></i>
-                    <span class="title">My Proposal</span>
+                    <span class="title">Proposal / FYP</span>
                   </a>
                 </li>
               </ul>
@@ -98,7 +98,7 @@ export const StudentSidebar = () => {
                 <li>
                   <a href="/student/request-supervisor">
                     <i class="fa fa-send-o"></i>
-                    <span class="title">Request for Supervision</span>
+                    <span class="title">Supervisors</span>
                   </a>
                 </li>
               </ul>
@@ -114,16 +114,15 @@ export const StudentSidebar = () => {
                 <li>
                   <a href="/student/supervisor-comments">
                     <i class="fa fa-comments-o"></i>
-                    <span class="title">Supervisor Comments</span>
-                    <span class="badge badge-secondary">3</span>
+                    <span class="title">Attendance and Comments</span>
                   </a>
                 </li>
-                <li>
-                  <a href="/student/student-attendance">
-                    <i class="fa fa-check-square"></i>
-                    <span class="title">Attendance</span>
-                  </a>
-                </li>
+                {/*<li>*/}
+                {/*  <a href="/student/student-attendance">*/}
+                {/*    <i class="fa fa-check-square"></i>*/}
+                {/*    <span class="title">Attendance</span>*/}
+                {/*  </a>*/}
+                {/*</li>*/}
               </ul>
             </li>
 
