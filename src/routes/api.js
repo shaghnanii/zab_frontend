@@ -145,6 +145,17 @@ const supervisor_index = async (headers = {}) => {
     }
 }
 
+const supervisor_show = async (headers = {}) => {
+    try {
+        return axios.get('/supervisors/me', {
+            headers: getHeaders(headers)
+        })
+    }
+    catch (err) {
+        throw err.response
+    }
+}
+
 const supervisor_update = async (data, id, headers = {}) => {
     try {
         return axios.put(`/supervisors/${id}`, data, {
@@ -426,6 +437,7 @@ export default {
 
     // supervisor routes
     supervisor_index,
+    supervisor_show,
     supervisor_update,
     supervisor_destroy,
 

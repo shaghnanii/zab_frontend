@@ -47,13 +47,15 @@ import {FypOneList} from "./components/supervisor/fyp_lists/fyp_one/FypOneList";
 import {FypTwoList} from "./components/supervisor/fyp_lists/fyp_two/FypTwoList";
 import {FypOneMeeting} from "./components/supervisor/meetings/fyp_one/FypOneMeeting";
 import {FypTwoMeeting} from "./components/supervisor/meetings/fyp_two/FypTwoMeeting";
-import {PMSupervisorListing} from "./components/pm/supervisor_listing/PMSupervisorListing";
-import {PMMeetingPartOneListing} from "./components/pm/meeting_listing/one/PMMeetingPartOneListing";
-import {PMMeetingPartTwoListing} from "./components/pm/meeting_listing/two/PMMeetingPartTwoListing";
-import {PMAttendanceOneListing} from "./components/pm/attendance_listing/fyp_one/PMAttendanceOneListing";
-import {PMAttendanceTwoListing} from "./components/pm/attendance_listing/fyp_two/PMAttendanceTwoListing";
-import {PMFypTwoListing} from "./components/pm/fyp_listing/fyp_two/PMFypTwoListing";
-import {PMFypOneListing} from "./components/pm/fyp_listing/fyp_one/PMFypOneListing";
+
+import {PmSupervisor} from "./components/pm/supervisor_listing/PmSupervisor";
+import {PmMeetingOne} from "./components/pm/meeting_listing/one/PmMeetingOne";
+import {PmMeetingTwo} from "./components/pm/meeting_listing/two/PmMeetingTwo";
+import {PmAttedance} from "./components/pm/meeting_listing/one/PmAttendance";
+import {PmAttendanceTwo} from "./components/pm/meeting_listing/two/PmAttendanceTwo";
+
+import {PmFypTwo} from "./components/pm/fyp_listing/fyp_two/PmFypTwo";
+import {PmFypOne} from "./components/pm/fyp_listing/fyp_one/PmFypOne";
 import {Reset} from "./components/auth/Reset";
 import { LOGIN_EXPIRE } from "./components/_general_components/_api/apiconstants";
 
@@ -163,17 +165,15 @@ function App() {
               {/* PM routes start here  */}
               <PMProtectedRoute path="/pm/home" component={PMHome} />
 
-              <PMProtectedRoute path="/pm/fyp-one" component={PMFypOneListing} />
-              <PMProtectedRoute path="/pm/fyp-two" component={PMFypTwoListing} />
+              <PMProtectedRoute path="/pm/fyp-one" component={PmFypOne} />
+              <PMProtectedRoute path="/pm/fyp-two" component={PmFypTwo} />
 
-              <PMProtectedRoute path="/pm/supervisors-list" component={PMSupervisorListing} />
+              <PMProtectedRoute path="/pm/supervisors-list" component={PmSupervisor} />
 
-              <PMProtectedRoute path="/pm/meetings-part-one" component={PMMeetingPartOneListing} />
-              <PMProtectedRoute path="/pm/meetings-part-two" component={PMMeetingPartTwoListing} />
-
-              <PMProtectedRoute path="/pm/attendance-part-one" component={PMAttendanceOneListing} />
-              <PMProtectedRoute path="/pm/attendance-part-two" component={PMAttendanceTwoListing} />
-              {/* PM routes ends here  */}
+              <PMProtectedRoute path="/pm/meetings-and-comments-one" component={PmMeetingOne} />
+              <PMProtectedRoute path="/pm/meetings-attendance" component={PmAttedance} />
+              <PMProtectedRoute path="/pm/meetings-attendance-two" component={PmAttendanceTwo} />
+              <PMProtectedRoute path="/pm/meetings-and-comments-two" component={PmMeetingTwo} />
 
               {/* Supervisor routes starts here  */}
               <SupervisorProtectedRoute

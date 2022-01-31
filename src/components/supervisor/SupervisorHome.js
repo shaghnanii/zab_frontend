@@ -11,7 +11,7 @@ import api from '../../routes/api'
 export const SupervisorHome = () => {
     const [userData, setUserData] = useState({})
     useEffect(() => {
-        api.supervisor_index()
+        api.supervisor_show()
             .then(response => {
                 setUserData(response.data.data)
             })

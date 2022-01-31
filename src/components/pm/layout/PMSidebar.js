@@ -97,35 +97,22 @@ export const PMSidebar = () => {
             <a href="javascript:void(0);" target="_blank">
               <i className="fa fa-group"></i>
               <span className="title">Attendance & Meetings</span>
-              <span className="badge badge-secondary">3</span>
+              <span className="badge badge-secondary">new</span>
             </a>
             <ul>
               <li>
-                <a href="/pm/meetings-part-one">
+                <a href="/pm/meetings-and-comments-one">
                   <i className="fa fa-comments-o"></i>
-                  <span className="title">Part-I Meetings</span>
-                  <span className="badge badge-secondary">3</span>
+                  <span className="title">Part-I Attendances & comments</span>
                 </a>
               </li>
               <li>
-                <a href="/pm/meetings-part-two">
-                  <i className="fa fa-comments-o"></i>
-                  <span className="title">Part-II Meetings</span>
-                  <span className="badge badge-secondary">3</span>
-                </a>
-              </li>
-              <li>
-                <a href="/pm/attendance-part-one">
+                <a href="/pm/meetings-and-comments-two">
                   <i className="fa fa-check-square"></i>
-                  <span className="title">Part-I Attendance</span>
+                  <span className="title">Part-II Attendances & comments</span>
                 </a>
               </li>
-              <li>
-                <a href="/pm/attendance-part-two">
-                  <i className="fa fa-check-square"></i>
-                  <span className="title">Part-II Attendance</span>
-                </a>
-              </li>
+
             </ul>
           </li>
 
