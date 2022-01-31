@@ -56,6 +56,8 @@ import {PmAttendanceTwo} from "./components/pm/meeting_listing/two/PmAttendanceT
 import {AssessmentMain} from "./components/pm/assessment/AssessmentMain";
 import {AssessmentTwoMain} from "./components/pm/assessment/AssessmentTwoMain";
 import {AssessmentResult} from "./components/pm/assessment/AssessmentResult";
+import {CreatePannel} from "./components/pm/pannel/create/CreatePannel";
+import {ListPannel} from "./components/pm/pannel/list/ListPannel";
 
 import {PmFypTwo} from "./components/pm/fyp_listing/fyp_two/PmFypTwo";
 import {PmFypOne} from "./components/pm/fyp_listing/fyp_one/PmFypOne";
@@ -176,6 +178,10 @@ function App() {
               <PMProtectedRoute path="/pm/pm-assessments-one" component={AssessmentMain} />
               <PMProtectedRoute path="/pm/pm-assessments-two" component={AssessmentTwoMain} />
               <PMProtectedRoute path="/pm/pm-assessments-results" component={AssessmentResult} />
+
+
+              <PMProtectedRoute path="/pm/pannel-create" component={CreatePannel} />
+              <PMProtectedRoute path="/pm/pannel-list" component={ListPannel} />
 
               <PMProtectedRoute path="/pm/meetings-and-comments-one" component={PmMeetingOne} />
               <PMProtectedRoute path="/pm/meetings-attendance" component={PmAttedance} />

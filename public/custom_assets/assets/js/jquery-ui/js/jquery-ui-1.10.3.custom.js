@@ -1433,7 +1433,7 @@ $.ui.position = {
 		body = document.getElementsByTagName( "body" )[ 0 ],
 		div = document.createElement( "div" );
 
-	//Create a "fake body" for testing based on method used in jQuery.support
+	//create a "fake body" for testing based on method used in jQuery.support
 	testElement = document.createElement( body ? "div" : "body" );
 	testElementStyle = {
 		visibility: "hidden",
@@ -1557,7 +1557,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 
 		var o = this.options;
 
-		//Create and append the visible helper
+		//create and append the visible helper
 		this.helper = this._createHelper(event);
 
 		this.helper.addClass("ui-draggable-dragging");
@@ -2674,7 +2674,7 @@ $.ui.ddmanager = {
 	drop: function(draggable, event) {
 
 		var dropped = false;
-		// Create a copy of the droppables in case the list changes during the drop (#9116)
+		// create a copy of the droppables in case the list changes during the drop (#9116)
 		$.each(($.ui.ddmanager.droppables[draggable.options.scope] || []).slice(), function() {
 
 			if(!this.options) {
@@ -2821,7 +2821,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 		//Wrap the element if it cannot hold child nodes
 		if(this.element[0].nodeName.match(/canvas|textarea|input|select|button|img/i)) {
 
-			//Create a wrapper element and set the wrapper to the new current internal element
+			//create a wrapper element and set the wrapper to the new current internal element
 			this.element.wrap(
 				$("<div class='ui-wrapper' style='overflow: hidden;'></div>").css({
 					position: this.element.css("position"),
@@ -4138,7 +4138,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 		//We only need to call refreshPositions, because the refreshItems call has been moved to mouseCapture
 		this.refreshPositions();
 
-		//Create and append the visible helper
+		//create and append the visible helper
 		this.helper = this._createHelper(event);
 
 		//Cache the helper size
@@ -4192,7 +4192,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 			this.currentItem.hide();
 		}
 
-		//Create the placeholder
+		//create the placeholder
 		this._createPlaceholder();
 
 		//Set a containment if given in the options
@@ -4766,7 +4766,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 			};
 		}
 
-		//Create the placeholder
+		//create the placeholder
 		that.placeholder = $(o.placeholder.element.call(that.element, that.currentItem));
 
 		//Append it after the actual current item
@@ -6950,7 +6950,7 @@ $.extend(Datepicker.prototype, {
 		}
 	},
 
-	/* Create a new instance object. */
+	/* create a new instance object. */
 	_newInst: function(target, inline) {
 		var id = target[0].id.replace(/([^A-Za-z0-9_\-])/g, "\\\\$1"); // escape jQuery meta chars
 		return {id: id, input: target, // associated target
@@ -13998,7 +13998,7 @@ var rvertical = /up|down|vertical/,
 	rpositivemotion = /up|left|vertical|horizontal/;
 
 $.effects.effect.blind = function( o, done ) {
-	// Create element
+	// create element
 	var el = $( this ),
 		props = [ "position", "top", "bottom", "left", "right", "height", "width" ],
 		mode = $.effects.setMode( el, o.mode || "hide" ),
@@ -14098,7 +14098,7 @@ $.effects.effect.bounce = function( o, done ) {
 
 	$.effects.save( el, props );
 	el.show();
-	$.effects.createWrapper( el ); // Create Wrapper
+	$.effects.createWrapper( el ); // create Wrapper
 
 	// default distance for the BIGGEST bounce is the outer Distance / 3
 	if ( !distance ) {
@@ -14164,7 +14164,7 @@ $.effects.effect.bounce = function( o, done ) {
 (function( $, undefined ) {
 
 $.effects.effect.clip = function( o, done ) {
-	// Create element
+	// create element
 	var el = $( this ),
 		props = [ "position", "top", "bottom", "left", "right", "height", "width" ],
 		mode = $.effects.setMode( el, o.mode || "hide" ),
@@ -14180,7 +14180,7 @@ $.effects.effect.clip = function( o, done ) {
 	$.effects.save( el, props );
 	el.show();
 
-	// Create Wrapper
+	// create Wrapper
 	wrapper = $.effects.createWrapper( el ).css({
 		overflow: "hidden"
 	});
@@ -14193,7 +14193,7 @@ $.effects.effect.clip = function( o, done ) {
 		animate.css( position, distance / 2 );
 	}
 
-	// Create Animation Object:
+	// create Animation Object:
 	animation[ size ] = show ? distance : 0;
 	animation[ position ] = show ? 0 : distance / 2;
 
@@ -14305,7 +14305,7 @@ $.effects.effect.explode = function( o, done ) {
 			left = offset.left + j * width;
 			mx = j - ( cells - 1 ) / 2 ;
 
-			// Create a clone of the now hidden main element that will be absolute positioned
+			// create a clone of the now hidden main element that will be absolute positioned
 			// within a wrapper div off the -left and -top equal to size of our pieces
 			el
 				.clone()
@@ -14372,7 +14372,7 @@ $.effects.effect.fade = function( o, done ) {
 
 $.effects.effect.fold = function( o, done ) {
 
-	// Create element
+	// create element
 	var el = $( this ),
 		props = [ "position", "top", "bottom", "left", "right", "height", "width" ],
 		mode = $.effects.setMode( el, o.mode || "hide" ),
@@ -14391,7 +14391,7 @@ $.effects.effect.fold = function( o, done ) {
 	$.effects.save( el, props );
 	el.show();
 
-	// Create Wrapper
+	// create Wrapper
 	wrapper = $.effects.createWrapper( el ).css({
 		overflow: "hidden"
 	});
@@ -14555,7 +14555,7 @@ $.effects.effect.puff = function( o, done ) {
 
 $.effects.effect.scale = function( o, done ) {
 
-	// Create element
+	// create element
 	var el = $( this ),
 		options = $.extend( true, {}, o ),
 		mode = $.effects.setMode( el, o.mode || "effect" ),
@@ -14617,7 +14617,7 @@ $.effects.effect.scale = function( o, done ) {
 
 $.effects.effect.size = function( o, done ) {
 
-	// Create element
+	// create element
 	var original, baseline, factor,
 		el = $( this ),
 		props0 = [ "position", "top", "bottom", "left", "right", "width", "height", "overflow", "opacity" ],
@@ -14888,7 +14888,7 @@ $.effects.effect.shake = function( o, done ) {
 
 $.effects.effect.slide = function( o, done ) {
 
-	// Create element
+	// create element
 	var el = $( this ),
 		props = [ "position", "top", "bottom", "left", "right", "width", "height" ],
 		mode = $.effects.setMode( el, o.mode || "show" ),

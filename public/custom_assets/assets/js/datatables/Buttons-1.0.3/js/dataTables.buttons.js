@@ -425,7 +425,7 @@ $.extend( Buttons.prototype, {
 	},
 
 	/**
-	 * Create buttons from an array of buttons
+	 * create buttons from an array of buttons
 	 * @param  {array} Buttons to create
 	 * @param  {jQuery} Container node into which the created button should be
 	 *   inserted.
@@ -501,7 +501,7 @@ $.extend( Buttons.prototype, {
 	},
 
 	/**
-	 * Create an individual button
+	 * create an individual button
 	 * @param  {object} config            Resolved button configuration
 	 * @param  {boolean} collectionButton `true` if a collection button
 	 * @return {jQuery} Created button node (jQuery)

@@ -9,7 +9,7 @@
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
 
-/******/ 		// Create a new module (and put it into the cache)
+/******/ 		// create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
@@ -3811,7 +3811,7 @@
 	  /*--------------------------------------------------------------------------*/
 
 	  /**
-	   * Create a new pristine `lodash` function using the given `context` object.
+	   * create a new pristine `lodash` function using the given `context` object.
 	   *
 	   * @static
 	   * @memberOf _
@@ -31896,7 +31896,7 @@
 	    s.heap[--s.heap_max] = n; /* keep the nodes sorted by frequency */
 	    s.heap[--s.heap_max] = m;
 
-	    /* Create a new node father of n and m */
+	    /* create a new node father of n and m */
 	    tree[node * 2]/*.Freq*/ = tree[n * 2]/*.Freq*/ + tree[m * 2]/*.Freq*/;
 	    s.depth[node] = (s.depth[n] >= s.depth[m] ? s.depth[n] : s.depth[m]) + 1;
 	    tree[n*2 + 1]/*.Dad*/ = tree[m*2 + 1]/*.Dad*/ = node;
@@ -32437,7 +32437,7 @@
 	  return table;
 	}
 
-	// Create table on load. Just 255 signed longs. Not a problem.
+	// create table on load. Just 255 signed longs. Not a problem.
 	var crcTable = makeTable();
 
 
@@ -33421,7 +33421,7 @@
 	  }
 
 	  /*
-	   Create and fill in decoding tables.  In this loop, the table being
+	   create and fill in decoding tables.  In this loop, the table being
 	   filled is at next and has curr index bits.  The code being used is huff
 	   with length len.  That code is converted to an index by dropping drop
 	   bits off of the bottom.  For codes where len is less than drop + curr,

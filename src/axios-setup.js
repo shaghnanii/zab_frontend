@@ -35,11 +35,14 @@ const responseErrorHandler = (error) => {
     if (error && error.response && error.response.status === 403) {
         // toaster["warning"](error.response.data.message, 'Un-Authorized');
     }
+    if (error && error.response && error.response.status === 422) {
+        toaster["success"](error.response.data.message, 'Validation errors');
+    }
 
     if (error && error.response && error.response.status === 404) {
         toaster["info"](error.response.data.message, 'Not Found');
     }
-    if (error && error.response && error.response.status > 404) {
+    if (error && error.response && error.response.status > 404 && error.response.status !== 422) {
         toaster["error"](error.response.data.message);
     }
 

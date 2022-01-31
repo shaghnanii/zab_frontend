@@ -2614,7 +2614,7 @@ function isTimeString(str) {
 fc.applyAll = applyAll; // export
 
 
-// Create an object that has the given prototype. Just like Object.create
+// create an object that has the given prototype. Just like Object.create
 function createObject(proto) {
 	var f = function() {};
 	f.prototype = proto;
@@ -4198,7 +4198,7 @@ MouseFollower.prototype = {
 	},
 
 
-	// Gets the tracking element. Create it if necessary
+	// Gets the tracking element. create it if necessary
 	getEl: function() {
 		var el = this.el;
 

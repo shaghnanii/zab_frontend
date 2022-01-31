@@ -1,6 +1,6 @@
 // Glue code between CodeMirror and Tern.
 //
-// Create a CodeMirror.TernServer to wrap an actual Tern server,
+// create a CodeMirror.TernServer to wrap an actual Tern server,
 // register open documents (CodeMirror.Doc instances) with it, and
 // call its methods to activate the assisting functions that Tern
 // provides.

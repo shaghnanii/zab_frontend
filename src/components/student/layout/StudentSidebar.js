@@ -69,7 +69,7 @@ export const StudentSidebar = () => {
                 {/*    <li>*/}
                 {/*      <a href="/student/group">*/}
                 {/*        <i className="entypo-doc-text"></i>*/}
-                {/*        <span className="title">Create Group</span>*/}
+                {/*        <span className="title">create Group</span>*/}
                 {/*      </a>*/}
                 {/*    </li> :  ''}*/}
 

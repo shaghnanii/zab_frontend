@@ -328,7 +328,7 @@
         function getTests(pos, ndxIntlzr, tstPs, cacheable) {
             function resolveTestFromToken(maskToken, ndxInitializer, loopNdx, quantifierRecurse) {
                 function handleMatch(match, loopNdx, quantifierRecurse) {
-                    if (testPos > 1e4) throw "Inputmask: There is probably an error in your mask definition or in the code. Create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
+                    if (testPos > 1e4) throw "Inputmask: There is probably an error in your mask definition or in the code. create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
                     if (testPos === pos && void 0 === match.matches) return matches.push({
                         match: match,
                         locator: loopNdx.reverse()

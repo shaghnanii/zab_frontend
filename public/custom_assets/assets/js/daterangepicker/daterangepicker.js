@@ -199,7 +199,7 @@
             if (typeof options.locale === 'object') {
 
                 if (typeof options.locale.daysOfWeek === 'object') {
-                    // Create a copy of daysOfWeek to avoid modification of original
+                    // create a copy of daysOfWeek to avoid modification of original
                     // options object for reusability in multiple daterangepicker instances
                     this.locale.daysOfWeek = options.locale.daysOfWeek.slice();
                 }
@@ -622,7 +622,7 @@
             this.container.show();
             this.move();
 
-            // Create a click proxy that is private to this instance of datepicker, for unbinding
+            // create a click proxy that is private to this instance of datepicker, for unbinding
             this._outsideClickProxy = $.proxy(function (e) { this.outsideClick(e); }, this);
             // Bind global datepicker mousedown for hiding and
             $(document)

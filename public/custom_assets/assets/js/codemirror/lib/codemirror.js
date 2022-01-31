@@ -489,7 +489,7 @@ window.CodeMirror = (function() {
       while (to < end && lineIsHidden(doc, getLine(doc, to))) ++to;
     }
 
-    // Create a range of theoretically intact lines, and punch holes
+    // create a range of theoretically intact lines, and punch holes
     // in that using the change info.
     var intact = [{from: Math.max(display.showingFrom, doc.first),
                    to: Math.min(display.showingTo, end)}];

@@ -684,7 +684,7 @@ iframe {
  ========================================================================== */
 /*
  * 1. Makes grid more robust so that it can be used with other block elements
- * 2. Create horizontal gutter
+ * 2. create horizontal gutter
  * 3. `float` is set by default so columns always behave the same and create a new block format context
  */
 .uk-grid > [class*='uk-width-'] {
@@ -1156,7 +1156,7 @@ iframe {
  ========================================================================== */
 /*
  * 1. Needed for `a` elements
- * 2. Create position context for badges
+ * 2. create position context for badges
  */
 .uk-panel {
   /* 1 */
@@ -1733,7 +1733,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   float: left;
 }
 /*
- * 1. Create position context for dropdowns
+ * 1. create position context for dropdowns
  */
 .uk-navbar-nav > li {
   float: left;
@@ -1921,7 +1921,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Items
  ========================================================================== */
 /*
- * 1. Create position context for dropdowns
+ * 1. create position context for dropdowns
  * 2. Reset whitespace hack
  */
 .uk-subnav > li {
@@ -2162,7 +2162,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 /*
  * Items
- * 1. Create position context for dropdowns
+ * 1. create position context for dropdowns
  */
 .uk-tab > li {
   margin-bottom: -1px;
@@ -2315,7 +2315,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Modifier: 'tab-grid'
  ========================================================================== */
 /*
- * 1. Create position context to prevent hidden border because of negative `z-index`
+ * 1. create position context to prevent hidden border because of negative `z-index`
  */
 .uk-tab-grid {
   margin-left: -5px;
@@ -3056,7 +3056,7 @@ select.uk-form-width-mini {
  ========================================================================== */
 /*
  * 1. Behave like buttons
- * 2. Create position context for dropdowns
+ * 2. create position context for dropdowns
  * 3. Remove whitespace between child elements when using `inline-block`
  * 4. Prevent buttons from wrapping
  */
@@ -3078,7 +3078,7 @@ select.uk-form-width-mini {
  ========================================================================== */
 /*
  * 1. Behave like buttons
- * 2. Create position context for dropdowns
+ * 2. create position context for dropdowns
  */
 .uk-button-dropdown {
   /* 1 */
@@ -4572,7 +4572,7 @@ a.uk-thumbnail:focus {
  ========================================================================== */
 /*
  * 1. Container width fits its content
- * 2. Create position context
+ * 2. create position context
  * 3. Set max-width for responsive images to prevent `inline-block` consequences
  * 4. Remove the gap between the container and its child element
  */
@@ -4813,7 +4813,7 @@ a.uk-thumbnail:focus {
    Component: Search
  ========================================================================== */
 /*
- * 1. Create position context for dropdowns
+ * 1. create position context for dropdowns
  * 2. Needed for `form` element
  */
 .uk-search {
@@ -5989,7 +5989,7 @@ input.uk-search-field {
   clear: both;
 }
 /*
- *  Create a new block formatting context
+ *  create a new block formatting context
  */
 .uk-nbfc {
   overflow: hidden;
@@ -6117,7 +6117,7 @@ input.uk-search-field {
 /* Margin
  ========================================================================== */
 /* 
- * Create a block with the same margin of a paragraph
+ * create a block with the same margin of a paragraph
  */
 .uk-margin {
   margin-bottom: 15px;

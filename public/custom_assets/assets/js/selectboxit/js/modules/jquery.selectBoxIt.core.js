@@ -429,7 +429,7 @@
             // Appends the default text to the inner dropdown list dropdown element
             append(self.dropdownImageContainer.append(self.dropdownImage)).append(self.dropdownText);
 
-            // Create the dropdown container that will hold all of the dropdown list dom elements
+            // create the dropdown container that will hold all of the dropdown list dom elements
             self.dropdownContainer = $("<span/>", {
 
                 "id": originalElemId && originalElemId + "SelectBoxItContainer",

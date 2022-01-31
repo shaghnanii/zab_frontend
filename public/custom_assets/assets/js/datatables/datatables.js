@@ -906,7 +906,7 @@ function Sizzle( selector, context, results, seed ) {
 }
 
 /**
- * Create key-value caches of limited size
+ * create key-value caches of limited size
  * @returns {Function(string, Object)} Returns the Object data after storing it on itself with
  *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
  *	deleting the oldest entry
@@ -3103,7 +3103,7 @@ function createOptions( options ) {
 }
 
 /*
- * Create a callback list using the following parameters:
+ * create a callback list using the following parameters:
  *
  *	options: an optional list of space-separated options that will change how
  *			the callback list behaves or a more traditional option object
@@ -4753,7 +4753,7 @@ jQuery.event = {
 			return event;
 		}
 
-		// Create a writable copy of the event object and normalize some properties
+		// create a writable copy of the event object and normalize some properties
 		var i, prop, copy,
 			type = event.type,
 			originalEvent = event,
@@ -4976,7 +4976,7 @@ jQuery.Event = function( src, props ) {
 		jQuery.extend( this, props );
 	}
 
-	// Create a timestamp if incoming event doesn't have one
+	// create a timestamp if incoming event doesn't have one
 	this.timeStamp = src && src.timeStamp || jQuery.now();
 
 	// Mark it as fixed
@@ -5037,7 +5037,7 @@ jQuery.Event.prototype = {
 	}
 };
 
-// Create mouseenter/leave events using mouseover/out and event-time checks
+// create mouseenter/leave events using mouseover/out and event-time checks
 jQuery.each({
 	mouseenter: "mouseover",
 	mouseleave: "mouseout",
@@ -5172,7 +5172,7 @@ if ( !support.changeBubbles ) {
 	};
 }
 
-// Create "bubbling" focus and blur events
+// create "bubbling" focus and blur events
 if ( !support.focusinBubbles ) {
 	jQuery.each({ focus: "focusin", blur: "focusout" }, function( orig, fix ) {
 
@@ -8783,7 +8783,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 		// Work with a copy of dataTypes in case we need to modify it for conversion
 		dataTypes = s.dataTypes.slice();
 
-	// Create converters map with lowercased keys
+	// create converters map with lowercased keys
 	if ( dataTypes[ 1 ] ) {
 		for ( conv in s.converters ) {
 			converters[ conv.toLowerCase() ] = s.converters[ conv ];
@@ -8989,7 +8989,7 @@ jQuery.extend({
 			transport,
 			// Response headers
 			responseHeaders,
-			// Create the final options object
+			// create the final options object
 			s = jQuery.ajaxSetup( {}, options ),
 			// Callbacks context
 			callbackContext = s.context || s,
@@ -9577,7 +9577,7 @@ jQuery.fn.extend({
 });
 
 
-// Create the request object
+// create the request object
 // (This is still attached to ajaxSettings for backward compatibility)
 jQuery.ajaxSettings.xhr = window.ActiveXObject !== undefined ?
 	// Support: IE6+
@@ -9618,7 +9618,7 @@ if ( window.attachEvent ) {
 support.cors = !!xhrSupported && ( "withCredentials" in xhrSupported );
 xhrSupported = support.ajax = !!xhrSupported;
 
-// Create transport if the browser can provide an xhr
+// create transport if the browser can provide an xhr
 if ( xhrSupported ) {
 
 	jQuery.ajaxTransport(function( options ) {
@@ -10208,7 +10208,7 @@ jQuery.fn.extend({
 	}
 });
 
-// Create scrollLeft and scrollTop methods
+// create scrollLeft and scrollTop methods
 jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method, prop ) {
 	var top = /Y/.test( prop );
 
@@ -10254,7 +10254,7 @@ jQuery.each( [ "top", "left" ], function( i, prop ) {
 });
 
 
-// Create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
+// create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
 jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 	jQuery.each( { padding: "inner" + name, content: type, "": "outer" + name }, function( defaultExtra, funcName ) {
 		// margin is only for outerHeight, outerWidth
@@ -14287,7 +14287,7 @@ function makeTable() {
   return table;
 }
 
-// Create table on load. Just 255 signed longs. Not a problem.
+// create table on load. Just 255 signed longs. Not a problem.
 var crcTable = makeTable();
 
 
@@ -18107,7 +18107,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
   }
 
   /*
-   Create and fill in decoding tables.  In this loop, the table being
+   create and fill in decoding tables.  In this loop, the table being
    filled is at next and has curr index bits.  The code being used is huff
    with length len.  That code is converted to an index by dropping drop
    bits off of the bottom.  For codes where len is less than drop + curr,
@@ -19008,7 +19008,7 @@ function build_tree(s, desc)
     s.heap[--s.heap_max] = n; /* keep the nodes sorted by frequency */
     s.heap[--s.heap_max] = m;
 
-    /* Create a new node father of n and m */
+    /* create a new node father of n and m */
     tree[node * 2]/*.Freq*/ = tree[n * 2]/*.Freq*/ + tree[m * 2]/*.Freq*/;
     s.depth[node] = (s.depth[n] >= s.depth[m] ? s.depth[n] : s.depth[m]) + 1;
     tree[n*2 + 1]/*.Dad*/ = tree[m*2 + 1]/*.Dad*/ = node;
@@ -19530,7 +19530,7 @@ module.exports = ZStream;
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
 
-/******/ 		// Create a new module (and put it into the cache)
+/******/ 		// create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
@@ -23332,7 +23332,7 @@ module.exports = ZStream;
 	  /*--------------------------------------------------------------------------*/
 
 	  /**
-	   * Create a new pristine `lodash` function using the given `context` object.
+	   * create a new pristine `lodash` function using the given `context` object.
 	   *
 	   * @static
 	   * @memberOf _
@@ -51417,7 +51417,7 @@ module.exports = ZStream;
 	    s.heap[--s.heap_max] = n; /* keep the nodes sorted by frequency */
 	    s.heap[--s.heap_max] = m;
 
-	    /* Create a new node father of n and m */
+	    /* create a new node father of n and m */
 	    tree[node * 2]/*.Freq*/ = tree[n * 2]/*.Freq*/ + tree[m * 2]/*.Freq*/;
 	    s.depth[node] = (s.depth[n] >= s.depth[m] ? s.depth[n] : s.depth[m]) + 1;
 	    tree[n*2 + 1]/*.Dad*/ = tree[m*2 + 1]/*.Dad*/ = node;
@@ -51958,7 +51958,7 @@ module.exports = ZStream;
 	  return table;
 	}
 
-	// Create table on load. Just 255 signed longs. Not a problem.
+	// create table on load. Just 255 signed longs. Not a problem.
 	var crcTable = makeTable();
 
 
@@ -52942,7 +52942,7 @@ module.exports = ZStream;
 	  }
 
 	  /*
-	   Create and fill in decoding tables.  In this loop, the table being
+	   create and fill in decoding tables.  In this loop, the table being
 	   filled is at next and has curr index bits.  The code being used is huff
 	   with length len.  That code is converted to an index by dropping drop
 	   bits off of the bottom.  For codes where len is less than drop + curr,
@@ -86211,7 +86211,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	
 	
 	/**
-	 * Create a mapping object that allows camel case parameters to be looked up
+	 * create a mapping object that allows camel case parameters to be looked up
 	 * for their Hungarian counterparts. The mapping is stored in a private
 	 * parameter called `_hungarianMap` which can be accessed on the source object.
 	 *  @param {object} o
@@ -86929,7 +86929,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	 */
 	function _fnAddData ( oSettings, aDataIn, nTr, anTds )
 	{
-		/* Create the object for storing information about this new row */
+		/* create the object for storing information about this new row */
 		var iRow = oSettings.aoData.length;
 		var oData = $.extend( true, {}, DataTable.models.oRow, {
 			src: nTr ? 'dom' : 'data',
@@ -86939,7 +86939,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 		oData._aData = aDataIn;
 		oSettings.aoData.push( oData );
 	
-		/* Create the cells */
+		/* create the cells */
 		var nTd, sThisType;
 		var columns = oSettings.aoColumns;
 	
@@ -86957,7 +86957,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 			oSettings.aIds[ id ] = oData;
 		}
 	
-		/* Create the DOM information, or register it if already present */
+		/* create the DOM information, or register it if already present */
 		if ( nTr || ! oSettings.oFeatures.bDeferRender )
 		{
 			_fnCreateTr( oSettings, iRow, nTr, anTds );
@@ -87601,7 +87601,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 		};
 	}
 	/**
-	 * Create a new TR element (and it's TD children) for a row
+	 * create a new TR element (and it's TD children) for a row
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow Row to consider
 	 *  @param {node} [nTrIn] TR element to add to the table - optional. If not given,
@@ -87724,7 +87724,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	
 	
 	/**
-	 * Create the HTML header for the table
+	 * create the HTML header for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -88351,7 +88351,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	}
 	
 	/**
-	 * Create an Ajax call based on the table's settings, taking into account that
+	 * create an Ajax call based on the table's settings, taking into account that
 	 * parameters can have multiple forms, and backwards compatibility.
 	 *
 	 * @param {object} oSettings dataTables settings object
@@ -90478,7 +90478,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 		/* No sorting required if server-side or no sorting array */
 		if ( _fnDataSource( oSettings ) != 'ssp' && aSort.length !== 0 )
 		{
-			// Create a value - key array of the current row positions such that we can use their
+			// create a value - key array of the current row positions such that we can use their
 			// current position during the sort, if values match, in order to perform stable sorting
 			for ( i=0, iLen=displayMaster.length ; i<iLen ; i++ ) {
 				aiOrig[ displayMaster[i] ] = i;
@@ -91324,7 +91324,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 		
 		
 		/**
-		 * Create a DataTables Api instance, with the currently selected tables for
+		 * create a DataTables Api instance, with the currently selected tables for
 		 * the Api's context.
 		 * @param {boolean} [traditional=false] Set the API instance's context to be
 		 *   only the table referred to by the `DataTable.ext.iApiIndex` option, as was
@@ -92083,7 +92083,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 				this.id = sId;
 			}
 			
-			/* Create the settings object for this table and set some of the default parameters */
+			/* create the settings object for this table and set some of the default parameters */
 			var oSettings = $.extend( true, {}, DataTable.models.oSettings, {
 				"sDestroyWidth": $this[0].style.width,
 				"sInstance":     sId,
@@ -98224,7 +98224,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 		 *  @dtopt Columns
 		 *
 		 *  @example
-		 *    // Create a comma separated list from an array of objects
+		 *    // create a comma separated list from an array of objects
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
 		 *        "ajaxSource": "sources/deep.txt",
@@ -100714,7 +100714,7 @@ window.pdfMake = window.pdfMake || {}; window.pdfMake.vfs = {"LICENSE.txt":"DQog
 	
 	
 	/**
-	 * Create a wrapper function for exporting an internal functions to an external API.
+	 * create a wrapper function for exporting an internal functions to an external API.
 	 *  @param {string} fn API function name
 	 *  @returns {function} wrapped function
 	 *  @memberof DataTable#internal
@@ -101450,7 +101450,7 @@ $.extend( Buttons.prototype, {
 	},
 
 	/**
-	 * Create buttons from an array of buttons
+	 * create buttons from an array of buttons
 	 * @param  {array} Buttons to create
 	 * @param  {jQuery} Container node into which the created button should be
 	 *   inserted.
@@ -101526,7 +101526,7 @@ $.extend( Buttons.prototype, {
 	},
 
 	/**
-	 * Create an individual button
+	 * create an individual button
 	 * @param  {object} config            Resolved button configuration
 	 * @param  {boolean} collectionButton `true` if a collection button
 	 * @return {jQuery} Created button node (jQuery)
@@ -106601,7 +106601,7 @@ Responsive.prototype = {
 
 
 	/**
-	 * Create the internal `columns` array with information about the columns
+	 * create the internal `columns` array with information about the columns
 	 * for the table. This includes determining which breakpoints the column
 	 * will appear in, based upon class names in the column, which makes up the
 	 * vast majority of this method.

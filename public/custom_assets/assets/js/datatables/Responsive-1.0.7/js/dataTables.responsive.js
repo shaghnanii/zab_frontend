@@ -285,7 +285,7 @@ Responsive.prototype = {
 
 
 	/**
-	 * Create the internal `columns` array with information about the columns
+	 * create the internal `columns` array with information about the columns
 	 * for the table. This includes determining which breakpoints the column
 	 * will appear in, based upon class names in the column, which makes up the
 	 * vast majority of this method.

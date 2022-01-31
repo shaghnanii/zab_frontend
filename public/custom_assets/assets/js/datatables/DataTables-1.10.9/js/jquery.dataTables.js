@@ -319,7 +319,7 @@
 	
 	
 	/**
-	 * Create a mapping object that allows camel case parameters to be looked up
+	 * create a mapping object that allows camel case parameters to be looked up
 	 * for their Hungarian counterparts. The mapping is stored in a private
 	 * parameter called `_hungarianMap` which can be accessed on the source object.
 	 *  @param {object} o
@@ -1037,7 +1037,7 @@
 	 */
 	function _fnAddData ( oSettings, aDataIn, nTr, anTds )
 	{
-		/* Create the object for storing information about this new row */
+		/* create the object for storing information about this new row */
 		var iRow = oSettings.aoData.length;
 		var oData = $.extend( true, {}, DataTable.models.oRow, {
 			src: nTr ? 'dom' : 'data',
@@ -1047,7 +1047,7 @@
 		oData._aData = aDataIn;
 		oSettings.aoData.push( oData );
 	
-		/* Create the cells */
+		/* create the cells */
 		var nTd, sThisType;
 		var columns = oSettings.aoColumns;
 	
@@ -1065,7 +1065,7 @@
 			oSettings.aIds[ id ] = oData;
 		}
 	
-		/* Create the DOM information, or register it if already present */
+		/* create the DOM information, or register it if already present */
 		if ( nTr || ! oSettings.oFeatures.bDeferRender )
 		{
 			_fnCreateTr( oSettings, iRow, nTr, anTds );
@@ -1709,7 +1709,7 @@
 		};
 	}
 	/**
-	 * Create a new TR element (and it's TD children) for a row
+	 * create a new TR element (and it's TD children) for a row
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow Row to consider
 	 *  @param {node} [nTrIn] TR element to add to the table - optional. If not given,
@@ -1832,7 +1832,7 @@
 	
 	
 	/**
-	 * Create the HTML header for the table
+	 * create the HTML header for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -2459,7 +2459,7 @@
 	}
 	
 	/**
-	 * Create an Ajax call based on the table's settings, taking into account that
+	 * create an Ajax call based on the table's settings, taking into account that
 	 * parameters can have multiple forms, and backwards compatibility.
 	 *
 	 * @param {object} oSettings dataTables settings object
@@ -4586,7 +4586,7 @@
 		/* No sorting required if server-side or no sorting array */
 		if ( _fnDataSource( oSettings ) != 'ssp' && aSort.length !== 0 )
 		{
-			// Create a value - key array of the current row positions such that we can use their
+			// create a value - key array of the current row positions such that we can use their
 			// current position during the sort, if values match, in order to perform stable sorting
 			for ( i=0, iLen=displayMaster.length ; i<iLen ; i++ ) {
 				aiOrig[ displayMaster[i] ] = i;
@@ -5432,7 +5432,7 @@
 		
 		
 		/**
-		 * Create a DataTables Api instance, with the currently selected tables for
+		 * create a DataTables Api instance, with the currently selected tables for
 		 * the Api's context.
 		 * @param {boolean} [traditional=false] Set the API instance's context to be
 		 *   only the table referred to by the `DataTable.ext.iApiIndex` option, as was
@@ -6191,7 +6191,7 @@
 				this.id = sId;
 			}
 			
-			/* Create the settings object for this table and set some of the default parameters */
+			/* create the settings object for this table and set some of the default parameters */
 			var oSettings = $.extend( true, {}, DataTable.models.oSettings, {
 				"sDestroyWidth": $this[0].style.width,
 				"sInstance":     sId,
@@ -12332,7 +12332,7 @@
 		 *  @dtopt Columns
 		 *
 		 *  @example
-		 *    // Create a comma separated list from an array of objects
+		 *    // create a comma separated list from an array of objects
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
 		 *        "ajaxSource": "sources/deep.txt",
@@ -14822,7 +14822,7 @@
 	
 	
 	/**
-	 * Create a wrapper function for exporting an internal functions to an external API.
+	 * create a wrapper function for exporting an internal functions to an external API.
 	 *  @param {string} fn API function name
 	 *  @returns {function} wrapped function
 	 *  @memberof DataTable#internal

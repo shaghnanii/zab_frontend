@@ -100,6 +100,27 @@ export const PMSidebar = () => {
           </li>
 
           <li className="has-sub">
+            <a href="javascript:void(0);">
+              <i className="fa fa-compass"></i>
+              <span className="title">Create Pannel</span>
+            </a>
+            <ul>
+              <li>
+                <a href="/pm/pannel-list">
+                  <i className="fa fa-send-o"></i>
+                  <span className="title">Pannels</span>
+                </a>
+              </li>
+              <li>
+                <a href="/pm/pannel-create">
+                  <i className="fa fa-send-o"></i>
+                  <span className="title">Create Pannel</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li className="has-sub">
             <a href="javascript:void(0);" target="_blank">
               <i className="fa fa-group"></i>
               <span className="title">Attendance & Meetings</span>

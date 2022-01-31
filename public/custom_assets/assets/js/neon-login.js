@@ -334,7 +334,7 @@ var neonLogin = neonLogin || {};
 		});
 		
 		
-		// Lockscreen Create Canvas
+		// Lockscreen create Canvas
 		if(is_lockscreen)
 		{
 			neonLogin.$lockscreen_progress_canvas = $('<canvas></canvas>');
@@ -356,7 +356,7 @@ var neonLogin = neonLogin || {};
 			
 			neonLogin.lockscreen_progress_canvas = neonLogin.$lockscreen_progress_canvas.get(0);
 			
-			// Create Progress Circle
+			// create Progress Circle
 			var bg = neonLogin.lockscreen_progress_canvas,
 				ctx = ctx = bg.getContext('2d'),
 				imd = null,
