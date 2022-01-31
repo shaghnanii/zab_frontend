@@ -35,6 +35,7 @@ export const PMMeetingAttendance = (props) => {
                                 <th width="15%">Attendance Date</th>
                                 <th width="15%">Group Name</th>
                                 <th>Attendance Status</th>
+                                <th>Supervisor Comment</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -54,6 +55,9 @@ export const PMMeetingAttendance = (props) => {
                                             }
                                             style={{'font-weight': 'bold'}}
                                         >{ item.status }</span></td>
+                                        <td>
+                                            {item && item.Comment && item.Comment.comment != null ? item.Comment.comment : 'NA'}
+                                        </td>
                                     </tr>
                                 )}
                             </tbody>

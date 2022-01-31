@@ -64,17 +64,23 @@ export const PMSidebar = () => {
             </a>
             <ul>
               <li>
-                <a href="/pm/fyp-one">
+                <a href="/pm/pm-assessments-one">
                   <i className="entypo-docs"></i>
                   <span className="title">FYP 1</span>
                 </a>
               </li>
               <li>
-                <a href="/pm/fyp-two">
+                <a href="/pm/pm-assessments-two">
                   <i className="entypo-docs"></i>
                   <span className="title">FYP 2</span>
                 </a>
               </li>
+              {/*<li>*/}
+              {/*  <a href="/pm/pm-assessments-results">*/}
+              {/*    <i className="entypo-docs"></i>*/}
+              {/*    <span className="title">Assessment Result</span>*/}
+              {/*  </a>*/}
+              {/*</li>*/}
             </ul>
           </li>
 

@@ -53,6 +53,9 @@ import {PmMeetingOne} from "./components/pm/meeting_listing/one/PmMeetingOne";
 import {PmMeetingTwo} from "./components/pm/meeting_listing/two/PmMeetingTwo";
 import {PmAttedance} from "./components/pm/meeting_listing/one/PmAttendance";
 import {PmAttendanceTwo} from "./components/pm/meeting_listing/two/PmAttendanceTwo";
+import {AssessmentMain} from "./components/pm/assessment/AssessmentMain";
+import {AssessmentTwoMain} from "./components/pm/assessment/AssessmentTwoMain";
+import {AssessmentResult} from "./components/pm/assessment/AssessmentResult";
 
 import {PmFypTwo} from "./components/pm/fyp_listing/fyp_two/PmFypTwo";
 import {PmFypOne} from "./components/pm/fyp_listing/fyp_one/PmFypOne";
@@ -169,6 +172,10 @@ function App() {
               <PMProtectedRoute path="/pm/fyp-two" component={PmFypTwo} />
 
               <PMProtectedRoute path="/pm/supervisors-list" component={PmSupervisor} />
+
+              <PMProtectedRoute path="/pm/pm-assessments-one" component={AssessmentMain} />
+              <PMProtectedRoute path="/pm/pm-assessments-two" component={AssessmentTwoMain} />
+              <PMProtectedRoute path="/pm/pm-assessments-results" component={AssessmentResult} />
 
               <PMProtectedRoute path="/pm/meetings-and-comments-one" component={PmMeetingOne} />
               <PMProtectedRoute path="/pm/meetings-attendance" component={PmAttedance} />
