@@ -49,7 +49,7 @@ export const SupervisorHomeContent = (props) => {
           <div className="col-sm-2">
             <a href="#;" className="profile-picture">
               <img
-                src="/custom_assets/faculty/aunsia-khan.jpg"
+                src="/images/image_sample.png"
                 style={{ width: "120", height: "120" }}
                 className="img-responsive img-circle"
               />

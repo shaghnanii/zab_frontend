@@ -77,7 +77,7 @@ export const PMSupervisorListing = () => {
             <>
                 <div className="member-entry">
                     <a href="#" className="member-img">
-                        <img src="/images/supervisor2.png" className="img-rounded"/>
+                        <img src="/images/image_sample.png" className="img-rounded"/>
                         <i className="entypo-forward"></i>
                     </a>
                     <div className="member-details"><h4>

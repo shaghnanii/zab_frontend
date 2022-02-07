@@ -50,7 +50,7 @@ export const PMHomeContent = (props) => {
           <div className="col-sm-2">
             <a href="javascript:void(0);" className="profile-picture">
               <img
-                src="/custom_assets/faculty/dr-tazeen.jpg"
+                src="/images/image_sample.png"
                 className="img-responsive img-circle"
                 style={{ width: "120", height: "120" }}
               />

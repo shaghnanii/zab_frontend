@@ -8,7 +8,7 @@ export const PMHeader = (props) => {
           <li className="profile-info dropdown">
             <a href="javascript:void(0);" className="dropdown-toggle" data-toggle="dropdown">
               <img
-                src="/custom_assets/faculty/dr-tazeen.jpg"
+                src="/images/image_sample.png"
                 alt=""
                 className="img-circle"
                 width="44"

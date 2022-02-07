@@ -8,7 +8,7 @@ export const SupervisorHeader = (props) => {
           <li className="profile-info dropdown">
             <a href="#;" className="dropdown-toggle" data-toggle="dropdown">
               <img
-                src="/custom_assets/faculty/aunsia-khan.jpg"
+                src="/images/image_sample.png"
                 alt=""
                 className="img-circle"
                 width="44"
