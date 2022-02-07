@@ -37,6 +37,9 @@ import { StudentResult } from "./components/student/student_results/StudentResul
 import { StudentSupervisor } from "./components/student/student_supervisor/StudentSupervisor";
 import { StudentFypProposal } from "./components/student/student_proposal/StudentFypProposal";
 import { StudentAttendance } from "./components/student/student_attendance/StudentAttendance";
+import { OneAttendanceDetail } from "./components/supervisor/attendance/fyp_one/details/OneAttendanceDetail";
+import { TwoAttendanceDetail } from "./components/supervisor/attendance/fyp_two/details/TwoAttendanceDetail";
+import { MarkAttendanceOne } from "./components/supervisor/attendance/fyp_one/mark/MarkAttendanceOne";
 import { Logout } from "./components/auth/Logout";
 import { Forgot } from "./components/auth/Forgot";
 import { PMHome } from "./components/pm/PMHome";
@@ -45,8 +48,8 @@ import {FypOneAttendance} from "./components/supervisor/attendance/fyp_one/FypOn
 import {FypTwoAttendance} from "./components/supervisor/attendance/fyp_two/FypTwoAttendance";
 import {FypOneList} from "./components/supervisor/fyp_lists/fyp_one/FypOneList";
 import {FypTwoList} from "./components/supervisor/fyp_lists/fyp_two/FypTwoList";
-import {FypOneMeeting} from "./components/supervisor/meetings/fyp_one/FypOneMeeting";
-import {FypTwoMeeting} from "./components/supervisor/meetings/fyp_two/FypTwoMeeting";
+import {AcceptProposal} from "./components/supervisor/accept_or_reject_proposal/AcceptProposal";
+import {response} from "./components/supervisor/accept_or_reject_proposal/response";
 
 import {PmSupervisor} from "./components/pm/supervisor_listing/PmSupervisor";
 import {PmMeetingOne} from "./components/pm/meeting_listing/one/PmMeetingOne";
@@ -205,23 +208,37 @@ function App() {
               />
 
               <SupervisorProtectedRoute
-                  path="/supervisor/meetings-fyp-1"
-                  component={FypOneMeeting}
-              />
-
-              <SupervisorProtectedRoute
-                  path="/supervisor/meetings-fyp-2"
-                  component={FypTwoMeeting}
-              />
-
-              <SupervisorProtectedRoute
-                  path="/supervisor/all-attendance-fyp-1"
+                  path="/supervisor/attendance-and-meetings-part-1"
                   component={FypOneAttendance}
               />
 
               <SupervisorProtectedRoute
-                  path="/supervisor/all-attendance-fyp-2"
+                  path="/supervisor/attendance-and-meetings-part-2"
                   component={FypTwoAttendance}
+              />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/view-attendance-1"
+                  component={OneAttendanceDetail}
+              />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/mark-attendance"
+                  component={MarkAttendanceOne}
+              />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/view-attendance-2"
+                  component={TwoAttendanceDetail}
+              />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/accept-or-reject-proposals"
+                  component={AcceptProposal}
+              />
+              <SupervisorProtectedRoute
+                  path="/supervisor/response-on-proposal"
+                  component={response}
               />
               {/* Supervisor routes ends here  */}
               <Route path="/forbidden-page" component={ForbiddenPage} />

@@ -16,13 +16,13 @@ export const SupervisorSidebar = () => {
           </div>
 
           <div className="sidebar-collapse">
-            <a href="javascript:void(0);" className="sidebar-collapse-icon with-animation">
+            <a href="#" className="sidebar-collapse-icon with-animation">
               <i className="entypo-menu"></i>
             </a>
           </div>
 
           <div className="sidebar-mobile-menu visible-xs">
-            <a href="javascript:void(0);" className="with-animation">
+            <a href="#" className="with-animation">
               <i className="entypo-menu"></i>
             </a>
           </div>
@@ -37,7 +37,14 @@ export const SupervisorSidebar = () => {
           </li>
 
           <li className="has-sub">
-            <a href="javascript:void(0);">
+            <a href="/supervisor/accept-or-reject-proposals">
+              <i className="fa fa-file-pdf-o"></i>
+              <span className="title">Accept/Reject Proposal</span>
+            </a>
+          </li>
+
+          <li className="has-sub">
+            <a href="#">
               <i className="fa fa-file-pdf-o"></i>
               <span className="title">Fyp Projects</span>
             </a>
@@ -58,36 +65,23 @@ export const SupervisorSidebar = () => {
           </li>
 
           <li className="has-sub">
-            <a href="javascript:void(0);" target="_blank">
+            <a href="#" target="_blank">
               <i className="fa fa-group"></i>
               <span className="title">Attendance & Meetings</span>
               <span className="badge badge-secondary">3</span>
             </a>
             <ul>
               <li>
-                <a href="/supervisor/meetings-fyp-1">
+                <a href="/supervisor/attendance-and-meetings-part-1">
                   <i className="fa fa-comments-o"></i>
-                  <span className="title">Fyp-I Meetings</span>
+                  <span className="title">Fyp-I Attendance & Meetings</span>
                   <span className="badge badge-secondary">3</span>
                 </a>
               </li>
               <li>
-                <a href="/supervisor/meetings-fyp-2">
-                  <i className="fa fa-comments-o"></i>
-                  <span className="title">Fyp-II Meetings</span>
-                  <span className="badge badge-secondary">3</span>
-                </a>
-              </li>
-              <li>
-                <a href="/supervisor/all-attendance-fyp-1">
+                <a href="/supervisor/attendance-and-meetings-part-2">
                   <i className="fa fa-check-square"></i>
-                  <span className="title">Fyp-I Attendance</span>
-                </a>
-              </li>
-              <li>
-                <a href="/supervisor/all-attendance-fyp-2">
-                  <i className="fa fa-check-square"></i>
-                  <span className="title">Fyp-II Attendance</span>
+                  <span className="title">Fyp-II Attendance & Meetings</span>
                 </a>
               </li>
             </ul>

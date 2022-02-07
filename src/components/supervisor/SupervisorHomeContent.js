@@ -47,7 +47,7 @@ export const SupervisorHomeContent = (props) => {
       <div className="profile-env">
         <header className="row">
           <div className="col-sm-2">
-            <a href="javascript:void(0);" className="profile-picture">
+            <a href="#;" className="profile-picture">
               <img
                 src="/custom_assets/faculty/aunsia-khan.jpg"
                 style={{ width: "120", height: "120" }}
@@ -60,9 +60,9 @@ export const SupervisorHomeContent = (props) => {
               <li>
                 <div className="profile-name">
                   <strong>
-                    <a href="javascript:void(0);">{props.response.name && props.response.name}</a>
+                    <a href="#;">{props.response.name && props.response.name}</a>
                     <a
-                      href="javascript:void(0);"
+                      href="#;"
                       className="user-status is-online tooltip-primary"
                       data-toggle="tooltip"
                       data-placement="top"
@@ -70,7 +70,7 @@ export const SupervisorHomeContent = (props) => {
                     ></a>
                   </strong>
                   <span>
-                    <a href="javascript:void(0);">Supervisor: { props.response.majors && (props.response.majors).toUpperCase()}</a>
+                    <a href="#;">Supervisor: { props.response.majors && (props.response.majors).toUpperCase()}</a>
                   </span>
                 </div>
               </li>
@@ -81,7 +81,7 @@ export const SupervisorHomeContent = (props) => {
                   </center>
                   <center>
                     <span>
-                      <a href="javascript:void(0);">Teacher</a>
+                      <a href="#;">Teacher</a>
                     </span>
                   </center>
                 </div>
@@ -91,7 +91,7 @@ export const SupervisorHomeContent = (props) => {
                   <h3>{props.response.User && props.response.User.reg_id && props.response.User.reg_id}</h3>
                   <center>
                     <span>
-                      <a href="javascript:void(0);">Registration #</a>
+                      <a href="#;">Registration #</a>
                     </span>{" "}
                   </center>
                 </div>
@@ -101,7 +101,7 @@ export const SupervisorHomeContent = (props) => {
           <div className="col-sm-3">
             <div className="profile-buttons">
               {" "}
-              <a href="javascript:void(0);" className="btn btn-default">
+              <a href="#;" className="btn btn-default">
                 {" "}
                 <i className="entypo-user"></i>
                 Edit Profile
@@ -115,7 +115,7 @@ export const SupervisorHomeContent = (props) => {
               <ul className="user-details">
                 <li>
                   {" "}
-                  <a href="javascript:void(0);">
+                  <a href="#;">
                     {" "}
                     <i className="entypo-location"></i>
                     Address: <span>{props.response.address && (props.response.address).toUpperCase()}</span>
@@ -123,14 +123,14 @@ export const SupervisorHomeContent = (props) => {
                 </li>
                 <li>
                   {" "}
-                  <a href="javascript:void(0);">
+                  <a href="#;">
                     {" "}
                     <i className="entypo-calendar"></i>
                     DOB: <span>{props.response.dob && props.response.dob}</span>
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0);">
+                  <a href="#;">
                     <i className="entypo-mail"></i>
                     Mail: <span>
                     {props.response.User && props.response.User.email && props.response.User.email}

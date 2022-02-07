@@ -6,7 +6,7 @@ export const SupervisorHeader = (props) => {
       <div className="col-md-6 col-sm-8 clearfix">
         <ul className="user-info pull-left pull-none-xsm">
           <li className="profile-info dropdown">
-            <a href="javascript:void(0);" className="dropdown-toggle" data-toggle="dropdown">
+            <a href="#;" className="dropdown-toggle" data-toggle="dropdown">
               <img
                 src="/custom_assets/faculty/aunsia-khan.jpg"
                 alt=""
@@ -21,7 +21,7 @@ export const SupervisorHeader = (props) => {
             <ul className="dropdown-menu">
               <li className="caret"></li>
               <li>
-                <a href="javascript:void(0);">
+                <a href="#;">
                   <i className="entypo-user"></i>
                   Edit Profile
                 </a>
@@ -42,7 +42,7 @@ export const SupervisorHeader = (props) => {
           <li className="dropdown language-selector">
             Language: &nbsp;
             <a
-              href="javascript:void(0);"
+              href="#;"
               className="dropdown-toggle"
               data-toggle="dropdown"
               data-close-others="true"
@@ -55,7 +55,7 @@ export const SupervisorHeader = (props) => {
             </a>
             <ul className="dropdown-menu pull-right">
               <li className="active">
-                <a href="javascript:void(0);">
+                <a href="#;">
                   <img
                     src="/custom_assets/assets/images/flags/flag-uk.png"
                     width="16"
@@ -74,7 +74,7 @@ export const SupervisorHeader = (props) => {
           <li className="sep"></li>
 
           <li style={{ display: "none" }}>
-            <a href="javascript:void(0);" data-toggle="chat" data-collapse-sidebar="1">
+            <a href="#;" data-toggle="chat" data-collapse-sidebar="1">
               <i className="entypo-chat"></i>
               Side Bar
               <span className="badge badge-success chat-notifications-badge is-hidden">
