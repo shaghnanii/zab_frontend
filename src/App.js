@@ -50,6 +50,7 @@ import {FypOneList} from "./components/supervisor/fyp_lists/fyp_one/FypOneList";
 import {FypTwoList} from "./components/supervisor/fyp_lists/fyp_two/FypTwoList";
 import {AcceptProposal} from "./components/supervisor/accept_or_reject_proposal/AcceptProposal";
 import {response} from "./components/supervisor/accept_or_reject_proposal/response";
+import {PannelMain} from "./components/supervisor/panel/PannelMain";
 
 import {PmSupervisor} from "./components/pm/supervisor_listing/PmSupervisor";
 import {PmMeetingOne} from "./components/pm/meeting_listing/one/PmMeetingOne";
@@ -230,6 +231,11 @@ function App() {
               <SupervisorProtectedRoute
                   path="/supervisor/view-attendance-2"
                   component={TwoAttendanceDetail}
+              />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/pannel-and-groups"
+                  component={PannelMain}
               />
 
               <SupervisorProtectedRoute

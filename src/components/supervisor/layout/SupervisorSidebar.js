@@ -44,6 +44,13 @@ export const SupervisorSidebar = () => {
           </li>
 
           <li className="has-sub">
+            <a href="/supervisor/pannel-and-groups">
+              <i className="fa fa-file-pdf-o"></i>
+              <span className="title">Pannel & Groups</span>
+            </a>
+          </li>
+
+          <li className="has-sub">
             <a href="#">
               <i className="fa fa-file-pdf-o"></i>
               <span className="title">Fyp Projects</span>
