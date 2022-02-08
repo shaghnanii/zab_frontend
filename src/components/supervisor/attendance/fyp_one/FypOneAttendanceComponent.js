@@ -117,12 +117,13 @@ export const FypOneAttendanceComponent = () => {
                                             <button className={'btn btn-primary'}>View Attendance</button>
                                         </Link>
 
+                                        {console.log('test attendace data: ', item)}
                                         <Link
                                             to={{
                                                 pathname: "/supervisor/mark-attendance",
                                                 state: {
                                                     fyp_id: item.Fyp.id,
-                                                    level: item.id,
+                                                    level: item.level,
                                                     m_text: 'Fyp Part-I',
                                                     fyp_name: item.Fyp.name,
                                                     group_name: item.name,
