@@ -171,7 +171,17 @@ export const PannelContent = () => {
                                 <i className={item.status == true ? 'entypo-check' : 'entypo-block' }></i>
                                 <a href="#">{ item.status == true ? 'Active' : 'Not Active'}</a>
                             </div>
-                            <button className={'btn btn-info'} >View Pannel Questions</button>
+                            <Link
+                                to={{
+                                    pathname: "/supervisor/view-all-assessments-results",
+                                    state: {
+                                        data: item.Assessments,
+                                        level: item.level
+                                    } // your data array of objects
+                                }}
+                            >
+                                <button className={'btn btn-info'} >View Assessments [need comfirmation or update on this button]</button>
+                            </Link>
                         </div>
                         <div className="row info-list">
                             <div className="col-sm-12">

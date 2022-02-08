@@ -64,6 +64,12 @@ export const PMSidebar = () => {
             </a>
             <ul>
               <li>
+                <a href="/pm/pm-create-assessments">
+                  <i className="entypo-docs"></i>
+                  <span className="title">Create Assessment</span>
+                </a>
+              </li>
+              <li>
                 <a href="/pm/pm-assessments-one">
                   <i className="entypo-docs"></i>
                   <span className="title">FYP 1</span>

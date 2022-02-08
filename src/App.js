@@ -51,6 +51,7 @@ import {FypTwoList} from "./components/supervisor/fyp_lists/fyp_two/FypTwoList";
 import {AcceptProposal} from "./components/supervisor/accept_or_reject_proposal/AcceptProposal";
 import {response} from "./components/supervisor/accept_or_reject_proposal/response";
 import {PannelMain} from "./components/supervisor/panel/PannelMain";
+import {SupervisorAssessmentResult} from "./components/supervisor/panel/view_assessement/SupervisorAssessmentResult";
 
 import {PmSupervisor} from "./components/pm/supervisor_listing/PmSupervisor";
 import {PmMeetingOne} from "./components/pm/meeting_listing/one/PmMeetingOne";
@@ -58,6 +59,7 @@ import {PmMeetingTwo} from "./components/pm/meeting_listing/two/PmMeetingTwo";
 import {PmAttedance} from "./components/pm/meeting_listing/one/PmAttendance";
 import {PmAttendanceTwo} from "./components/pm/meeting_listing/two/PmAttendanceTwo";
 import {AssessmentMain} from "./components/pm/assessment/AssessmentMain";
+import {CreateAssessment} from "./components/pm/assessment/create/CreateAssessment";
 import {AssessmentTwoMain} from "./components/pm/assessment/AssessmentTwoMain";
 import {AssessmentResult} from "./components/pm/assessment/AssessmentResult";
 import {CreatePannel} from "./components/pm/pannel/create/CreatePannel";
@@ -182,6 +184,7 @@ function App() {
               <PMProtectedRoute path="/pm/pm-assessments-one" component={AssessmentMain} />
               <PMProtectedRoute path="/pm/pm-assessments-two" component={AssessmentTwoMain} />
               <PMProtectedRoute path="/pm/pm-assessments-results" component={AssessmentResult} />
+              <PMProtectedRoute path="/pm/pm-create-assessments" component={CreateAssessment} />
 
 
               <PMProtectedRoute path="/pm/pannel-create" component={CreatePannel} />
@@ -242,6 +245,12 @@ function App() {
                   path="/supervisor/accept-or-reject-proposals"
                   component={AcceptProposal}
               />
+
+              <SupervisorProtectedRoute
+                  path="/supervisor/view-all-assessments-results"
+                  component={SupervisorAssessmentResult}
+              />
+
               <SupervisorProtectedRoute
                   path="/supervisor/response-on-proposal"
                   component={response}
