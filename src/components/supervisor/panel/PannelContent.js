@@ -171,7 +171,7 @@ export const PannelContent = () => {
                                 <i className={item.status == true ? 'entypo-check' : 'entypo-block' }></i>
                                 <a href="#">{ item.status == true ? 'Active' : 'Not Active'}</a>
                             </div>
-                            {/*<button className={'btn btn-info'} >View Pannel Questions</button>*/}
+                            <button className={'btn btn-info'} >View Pannel Questions</button>
                         </div>
                         <div className="row info-list">
                             <div className="col-sm-12">
