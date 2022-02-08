@@ -81,10 +81,16 @@ export const AdminFypListContent = () => {
                   <td>{formatter.format(Date.parse(data.createdAt))}</td>
                   <td>
                     <Link
-                        to={'/admin/fyp-list/view-details'}
-                        className="btn btn-success btn-sm btn-icon icon-left">
+                        to={{
+                          pathname: "/admin/fyp-list/view-details",
+                          state: {
+                            fyp_id: data.id,
+                            back_url: '/admin/fyp-list'
+                          } // your data array of objects
+                        }}
+                        className="btn btn-danger btn-sm btn-icon icon-left">
                       <i className="entypo-eye"></i>
-                      View Details
+                      Delete
                     </Link>
                   </td>
                 </tr>

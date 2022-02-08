@@ -5,7 +5,8 @@ import { AdminHeader } from "../../layout/AdminHeader";
 import { AdminSidebar } from "../../layout/AdminSidebar";
 import {AdminFypViewDetailsContent} from "./AdminFypViewDetailsContent";
 
-export const AdminFypViewDetails = () => {
+export const AdminFypViewDetails = (props) => {
+    const {state} = props && props.location && props.location
     return (
         <div className="page-body login-page login-form-fall loaded login-form-fall-init">
             <div className="page-container">
@@ -14,7 +15,7 @@ export const AdminFypViewDetails = () => {
                     <AdminHeader />
                     <hr />
 
-                    <AdminFypViewDetailsContent />
+                    <AdminFypViewDetailsContent data={state} />
 
                     <AdminFooter />
                 </div>
