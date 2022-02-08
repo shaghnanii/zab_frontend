@@ -12,10 +12,11 @@ export const AdminFypViewDetailsContent = (props) => {
     const history = useHistory();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-        let payload = {
-            fyp_id: props.fyp_id,
-        }
-        api.store('/delete-fyp', payload)
+        // let payload = {
+        //     fyp_id: props.fyp_id,
+        // }
+        props && props.data &&
+        api.destroy('/admin/fyps', props.data.fyp_id)
             .then(response => {
                 console.log('response:L ', response)
                 success_message();
@@ -41,7 +42,7 @@ export const AdminFypViewDetailsContent = (props) => {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut",
             "onHidden": function () {
-                window.location = props.back_url;
+                window.location = props.data.back_url;
             }
         }
         toastr.success('Successfully processed your request', 'Success Message', opts);
@@ -70,6 +71,7 @@ export const AdminFypViewDetailsContent = (props) => {
     return (
         <div>
 
+            { console.log("fyp detail:::::: ", props)}
             <center>
                 <Image src={'/images/loading.gif'}/>
                 <h4>Processing Request</h4>
