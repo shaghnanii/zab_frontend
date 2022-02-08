@@ -33,13 +33,10 @@ export const AssessmentResultComponent = (props) => {
                         { props
                             && props.data
                             && props.data.data
-                            && props.data.data.Student
-                            && props.data.data.Student.Group
-                            && props.data.data.Student.Group.Assessments
-                            && props.data.data.Student.Group.Assessments.map(item =>
+                            && props.data.data.Assessments.map(item =>
                                 <tr>
-                                    <td><span className="">{ props.data.data.Student.name}</span></td>
-                                    <td><span className="">{ props.data.data.email}</span></td>
+                                    <td><span className="">{ props.data.data.Students && props.data.data.Students.map(std => <>[ {std.name} ] </>)}</span></td>
+                                    <td><span className="">{ props.data.data.Students && props.data.data.Students.map(std => <>[ {std.User.email} ] </>)}</span></td>
                                     <td><span className="">{ item.question}</span></td>
                                     <td><span className="">{ item && item.total_mark}</span></td>
                                     <td><span className="">{ item && item.obtained_mark}</span></td>

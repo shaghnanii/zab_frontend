@@ -175,7 +175,7 @@ export const PannelContent = () => {
                                 to={{
                                     pathname: "/supervisor/view-all-assessments-results",
                                     state: {
-                                        data: item.Assessments,
+                                        data: item,
                                         level: item.level
                                     } // your data array of objects
                                 }}
