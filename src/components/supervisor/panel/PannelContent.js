@@ -180,7 +180,7 @@ export const PannelContent = () => {
                                     } // your data array of objects
                                 }}
                             >
-                                <button className={'btn btn-info'} >View Assessments [need comfirmation or update on this button]</button>
+                                <button className={'btn btn-info'} >View Assessments</button>
                             </Link>
                         </div>
                         <div className="row info-list">
